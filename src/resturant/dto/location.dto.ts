@@ -29,7 +29,7 @@ export class LocationDto {
     message: 'coordinates must have at most 2 elements',
   })
   @IsInt({
-    message: 'coordinates must be an integer',
+    message: 'coordinates item must be an integer',
     each: true,
   })
   coordinates: [Number];

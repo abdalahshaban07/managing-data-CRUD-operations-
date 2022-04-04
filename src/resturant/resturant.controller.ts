@@ -13,8 +13,7 @@ import { Response } from 'express';
 import mongoose from 'mongoose';
 import { CreateResturantDto } from './dto/create-resturant.dto';
 import { ResturantService } from './resturant.service';
-import { ResurantDocument } from './schemas/resturant.schema';
-import { handleNotFoundResturant } from './shared/handleNotFoundResturant';
+import { handleNotFound } from '../shared/handleNotFoundResturant';
 
 @Controller('resturant')
 export class ResturantController {
@@ -43,7 +42,7 @@ export class ResturantController {
           .json({ message: 'Invalid ID' });
       let resturant = await this.resturantServ.findById(id);
 
-      return handleNotFoundResturant(res, resturant);
+      return handleNotFound(res, resturant);
     } catch (error) {
       return res
         .status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -59,7 +58,7 @@ export class ResturantController {
   ) {
     try {
       let resturant = await this.resturantServ.findByUniqueName(uniqueName);
-      return handleNotFoundResturant(res, resturant);
+      return handleNotFound(res, resturant);
     } catch (error) {
       return res
         .status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -136,7 +135,7 @@ export class ResturantController {
           .json({ message: 'Invalid ID' });
 
       let deleted = await this.resturantServ.delete(id);
-      return handleNotFoundResturant(res, deleted);
+      return handleNotFound(res, deleted);
     } catch (error) {
       return res
         .status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -158,7 +157,7 @@ export class ResturantController {
           .json({ message: 'Invalid ID' });
 
       let updated = await this.resturantServ.update(id, updateResturantDto);
-      return handleNotFoundResturant(res, updated);
+      return handleNotFound(res, updated);
     } catch (error) {
       return res
         .status(HttpStatus.INTERNAL_SERVER_ERROR)
