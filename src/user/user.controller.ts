@@ -15,7 +15,7 @@ import { UserService } from './user.service';
 import { handleNotFound } from '../shared/handleNotFoundResturant';
 import { UserDto } from './dto/user.dto';
 
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private userServ: UserService) {}
 
