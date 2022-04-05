@@ -76,9 +76,10 @@ Develop a simple backend that helps a user manage any list of restaurants.
   PUT localhost:3000/resturants/:id
 ```
 
-| Parameter | Type     | Description                   |
-| :-------- | :------- | :---------------------------- |
-| `id`      | `string` | **Required**. Id of resturant |
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :----------------------------- |
+| `id`      | `string` | **Required**. Id of resturant  |
+| `fields`  | `object` | **Required**. Fields to update |
 
 #### delete resturant
 
