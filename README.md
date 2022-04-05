@@ -13,13 +13,13 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### Get all resturants
 
 ```http
-  GET /resturants
+  GET localhost:3000/resturants
 ```
 
 #### Get resturant BY ID
 
 ```http
-  GET /resturants/:id
+  GET localhost:3000/resturants/:id
 ```
 
 | Parameter | Type     | Description                            |
@@ -29,7 +29,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### Get resturant by UniqueName
 
 ```http
-  GET /resturants/unique-name/:unique-name
+  GET localhost:3000/resturants/unique-name/:unique-name
 ```
 
 | Parameter     | Type          | Description                                     |
@@ -39,7 +39,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### Get all resturants by Cuisine
 
 ```http
-  GET /resturants/cuisine/:cuisine
+  GET localhost:3000/resturants/cuisine/:cuisine
 ```
 
 | Parameter | Type     | Description                   |
@@ -49,7 +49,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### create a new resturant
 
 ```http
-  POST /resturants
+  POST localhost:3000/resturants
 ```
 
 | Parameter    | Type     | Description                                                                              |
@@ -62,7 +62,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### find nearby restaurants within 1 KM based on location
 
 ```http
-  GET /resturants/nearby/:lng/:lat
+  GET localhost:3000/resturants/nearby/:lng/:lat
 ```
 
 | Parameter | Type     | Description            |
@@ -73,7 +73,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### update resturant
 
 ```http
-  PUT /resturants/:id
+  PUT localhost:3000/resturants/:id
 ```
 
 | Parameter | Type     | Description                   |
@@ -83,7 +83,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 #### delete resturant
 
 ```http
-  DELETE /resturants/:id
+  DELETE localhost:3000/resturants/:id
 ```
 
 | Parameter | Type     | Description                   |
@@ -98,7 +98,7 @@ Develop a simple backend that helps a user manage any list of restaurants.
 - User has a restaurant where the Cuisine is Burger
 
 ```http
-  GET /users/cuisine/:cuisine
+  GET localhost:3000/users/cuisine/:cuisine
 ```
 
 | Parameter | Type     | Description                   |
